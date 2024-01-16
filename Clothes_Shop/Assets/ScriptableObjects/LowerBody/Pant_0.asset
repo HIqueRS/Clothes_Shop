@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Pant_0
   m_EditorClassIdentifier: 
   _path: LowerBody/LowerBody
-  _index: 2
+  _index: 0
   _name: Pant_0
   _sprite: {fileID: 801655284, guid: be99bcc24eab5ec4992e8e0982ef7e0c, type: 3}
-  _category: 0
+  _category: 2
   _cost: 5

@@ -4,5 +4,5 @@ using UnityEngine;
 
 namespace GlobalConfigurations 
 {
-   public enum Category { Clothing, Hair };
+   public enum Category { Hair, Shirt, Pants };
 }

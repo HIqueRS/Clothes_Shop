@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6e435ea9e012d24b938f660b3a7d9ca, type: 3}
-  m_Name: Hair_0
+  m_Name: Blank
   m_EditorClassIdentifier: 
-  _path: Hairs/Hairs
+  _path: Square
   _index: 0
-  _name: Hair_0
-  _sprite: {fileID: -431872732, guid: ed39de31e59da264f89e2f9cfff122a9, type: 3}
+  _name: 
+  _sprite: {fileID: 21300000, guid: 3ac51d772529a7a45a9c1632d3a9f21b, type: 3}
   _category: 0
-  _cost: 10
+  _cost: 0
