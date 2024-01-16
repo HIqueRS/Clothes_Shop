@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Shirt_0
   m_EditorClassIdentifier: 
   _path: UpperBody/UpperBody
+  _index: 4
   _name: Shirt_0
   _sprite: {fileID: -129645704, guid: 256ba887599a77d408ad5cf60adfea65, type: 3}
   _category: 0

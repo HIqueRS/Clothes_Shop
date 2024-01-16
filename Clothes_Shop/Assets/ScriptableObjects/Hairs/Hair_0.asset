@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Hair_0
   m_EditorClassIdentifier: 
   _path: Hairs/Hairs
+  _index: 9
   _name: Hair_0
   _sprite: {fileID: -431872732, guid: ed39de31e59da264f89e2f9cfff122a9, type: 3}
   _category: 1
