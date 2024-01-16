@@ -104,7 +104,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: UpperBodyClothes_0
+      name: UpperBody_0
       rect:
         serializedVersion: 2
         x: 0
@@ -125,7 +125,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpperBodyClothes_1
+      name: UpperBody_1
       rect:
         serializedVersion: 2
         x: 17
@@ -146,7 +146,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpperBodyClothes_2
+      name: UpperBody_2
       rect:
         serializedVersion: 2
         x: 34
@@ -167,7 +167,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpperBodyClothes_3
+      name: UpperBody_3
       rect:
         serializedVersion: 2
         x: 51
@@ -188,7 +188,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpperBodyClothes_4
+      name: UpperBody_4
       rect:
         serializedVersion: 2
         x: 0
@@ -209,7 +209,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpperBodyClothes_5
+      name: UpperBody_5
       rect:
         serializedVersion: 2
         x: 17
@@ -230,7 +230,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpperBodyClothes_6
+      name: UpperBody_6
       rect:
         serializedVersion: 2
         x: 34
@@ -251,7 +251,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpperBodyClothes_7
+      name: UpperBody_7
       rect:
         serializedVersion: 2
         x: 51
@@ -272,7 +272,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpperBodyClothes_8
+      name: UpperBody_8
       rect:
         serializedVersion: 2
         x: 0
@@ -293,7 +293,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpperBodyClothes_9
+      name: UpperBody_9
       rect:
         serializedVersion: 2
         x: 17
@@ -314,7 +314,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpperBodyClothes_10
+      name: UpperBody_10
       rect:
         serializedVersion: 2
         x: 34
@@ -335,7 +335,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpperBodyClothes_11
+      name: UpperBody_11
       rect:
         serializedVersion: 2
         x: 51
@@ -366,18 +366,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      UpperBodyClothes_4: -1834645892
-      UpperBodyClothes_7: 668816723
-      UpperBodyClothes_10: 1556926032
-      UpperBodyClothes_1: -1661981021
-      UpperBodyClothes_3: 845161041
-      UpperBodyClothes_6: 1960172157
-      UpperBodyClothes_2: 1285751709
-      UpperBodyClothes_0: -129645704
-      UpperBodyClothes_5: -1689038479
-      UpperBodyClothes_11: 768584819
-      UpperBodyClothes_9: 1447441180
-      UpperBodyClothes_8: -1714566716
+      UpperBody_4: -1834645892
+      UpperBody_11: 768584819
+      UpperBody_1: -1661981021
+      UpperBody_5: -1689038479
+      UpperBody_10: 1556926032
+      UpperBody_2: 1285751709
+      UpperBody_9: 1447441180
+      UpperBody_0: -129645704
+      UpperBody_6: 1960172157
+      UpperBody_3: 845161041
+      UpperBody_7: 668816723
+      UpperBody_8: -1714566716
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

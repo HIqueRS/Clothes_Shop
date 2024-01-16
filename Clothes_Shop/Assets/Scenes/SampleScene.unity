@@ -6207,6 +6207,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1425962064420422619, guid: c6511a62827e25c46bfee2419bc3da27, type: 3}
+      propertyPath: _equipedHair
+      value: 
+      objectReference: {fileID: 11400000, guid: 8bb5d5fc1f334e24ca043e1be4db95d1, type: 2}
+    - target: {fileID: 1425962064420422619, guid: c6511a62827e25c46bfee2419bc3da27, type: 3}
+      propertyPath: _equipedPants
+      value: 
+      objectReference: {fileID: 11400000, guid: b75f2d9b362cd2547b7ac2eb64840e80, type: 2}
+    - target: {fileID: 1425962064420422619, guid: c6511a62827e25c46bfee2419bc3da27, type: 3}
+      propertyPath: _equipedShirt
+      value: 
+      objectReference: {fileID: 11400000, guid: e94c377940b2de94ba803251d029d5b1, type: 2}
     - target: {fileID: 1923065171370458389, guid: c6511a62827e25c46bfee2419bc3da27, type: 3}
       propertyPath: m_Name
       value: Player
