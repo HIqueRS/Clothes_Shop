@@ -729,6 +729,7 @@ MonoBehaviour:
   _previewShirt: {fileID: 2779378420662565715}
   _previewPants: {fileID: 2779378420280999562}
   _blank: {fileID: 11400000, guid: 75f3dd589ff69f740ba133a021c300f3, type: 2}
+  _panel: {fileID: 0}
 --- !u!1 &2779378420662565713
 GameObject:
   m_ObjectHideFlags: 0
@@ -970,7 +971,7 @@ GameObject:
   - component: {fileID: 2779378421036374632}
   - component: {fileID: 2779378421036374633}
   m_Layer: 5
-  m_Name: Button
+  m_Name: OK_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1309,7 +1310,7 @@ GameObject:
   - component: {fileID: 2779378421343486506}
   - component: {fileID: 2779378421343486507}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: Close_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1417,7 +1418,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2779378421343486506}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1321737867}
+        m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+        m_MethodName: LoadLastClothe
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1321737867}
+        m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+        m_MethodName: CloseButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2779378421196819452}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2779378421492722269
 GameObject:
   m_ObjectHideFlags: 0
@@ -1776,7 +1813,7 @@ GameObject:
   - component: {fileID: 2779378421677045416}
   - component: {fileID: 2779378421677045417}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Back_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1884,7 +1921,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2779378421677045416}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1321737867}
+        m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+        m_MethodName: LoadLastClothe
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2779378422129785415
 GameObject:
   m_ObjectHideFlags: 0

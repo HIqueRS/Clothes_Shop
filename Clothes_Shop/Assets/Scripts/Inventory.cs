@@ -31,6 +31,10 @@ public class Inventory : MonoBehaviour
 
     private List<GameObject> _buttons;
 
+    private ClothingScriptable _lastHair;
+    private ClothingScriptable _lastShirt;
+    private ClothingScriptable _lastPants;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -72,8 +76,26 @@ public class Inventory : MonoBehaviour
             {
                 _panel.SetActive(true);
                 LoadInventory();
+                SetLastSprite(); 
+
             }   
         }
+    }
+
+    private void SetLastSprite()
+    {
+        _lastHair = _equipedHair;
+        _lastShirt = _equipedShirt;
+        _lastPants = _equipedPants;
+    }
+
+    public void LoadLastClothe()
+    {
+        _equipedHair = _lastHair;
+        _equipedShirt = _lastShirt;
+        _equipedPants = _lastPants;
+
+        LoadPreview();
     }
 
     private void LoadInventory()
