@@ -753,7 +753,8 @@ MonoBehaviour:
   _inventoryUIContent: {fileID: 0}
   _inventoryUIButton: {fileID: 0}
   _isInventory: 0
-  _blank: {fileID: 0}
+  _money: {fileID: 0}
+  _cost: {fileID: 0}
 --- !u!1 &2779378420662565713
 GameObject:
   m_ObjectHideFlags: 0
@@ -1740,7 +1741,9 @@ MonoBehaviour:
   _imageHair: {fileID: 2779378420956935685}
   _imageShirt: {fileID: 2779378420662565715}
   _imagePants: {fileID: 2779378420280999562}
-  _blank: {fileID: 11400000, guid: 75f3dd589ff69f740ba133a021c300f3, type: 2}
+  _blankHair: {fileID: 0}
+  _blankShirt: {fileID: 0}
+  _blankPants: {fileID: 0}
 --- !u!1 &2779378421635441815
 GameObject:
   m_ObjectHideFlags: 0
@@ -1839,7 +1842,7 @@ MonoBehaviour:
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 1
+  m_ScrollSensitivity: 5
   m_Viewport: {fileID: 2779378420126366852}
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 2779378420429716404}

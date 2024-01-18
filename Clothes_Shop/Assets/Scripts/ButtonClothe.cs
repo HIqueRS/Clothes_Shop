@@ -96,16 +96,18 @@ public class ButtonClothe : MonoBehaviour
     {
         ClothingScriptable aux;
 
-        aux = _inventory.GetEquiped(_clothingScriptable._category);
+        aux = _baseInventory.GetClothingByCategory(_clothingScriptable._category);
 
         if (_clothingScriptable.name == aux.name)
         {
-            _inventory.Unequip(_clothingScriptable._category);
+            _baseInventory.UnequipPreview(_clothingScriptable._category);
         }
         else
         {
-            _inventory.Equip(_clothingScriptable, _clothingScriptable._category);
+            _baseInventory.EquipPreview(_clothingScriptable);
         }
+        
+        _baseInventory.SumPreview();
     }
 
    

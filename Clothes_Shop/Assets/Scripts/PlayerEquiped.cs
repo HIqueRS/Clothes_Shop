@@ -19,7 +19,7 @@ public class PlayerEquiped : MonoBehaviour
 
     [Space(20)]
     [SerializeField]
-    public int _money;
+    private int _money;
 
     [Space(20)]
     [Header("Sprite renderer")]
@@ -133,12 +133,17 @@ public class PlayerEquiped : MonoBehaviour
         ChangeVisualization(clothe);
     }
 
-    private void AddOnMyClothes(ClothingScriptable clothe)
+    public void AddOnMyClothes(ClothingScriptable clothe)
     {
         if(_myClothes.Contains(clothe) == false && clothe._name != "Blank")
         {
             _myClothes.Add(clothe);
         }
+    }
+
+    public void ReduceMoney(int i)
+    {
+        _money -= i;
     }
 
     private void ChangeVisualization(ClothingScriptable clothe)
@@ -190,5 +195,10 @@ public class PlayerEquiped : MonoBehaviour
 
             default: return null;
         }
+    }
+
+    public int GetMoney()
+    {
+        return _money;
     }
 }

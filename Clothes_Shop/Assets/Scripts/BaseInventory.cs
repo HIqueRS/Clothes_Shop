@@ -2,8 +2,8 @@ using GlobalConfigurations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using GlobalConfigurations;
 using Unity.VisualScripting;
+using TMPro;
 
 public class BaseInventory : MonoBehaviour
 {
@@ -37,9 +37,11 @@ public class BaseInventory : MonoBehaviour
 
 
     [SerializeField]
-    protected ClothingScriptable _blank;
-    
+    private TextMeshProUGUI _moneyText;
+    [SerializeField]
+    private TextMeshProUGUI _costText;
 
+    private int _costInt;
     // Start is called before the first frame update
     void Start()
     {
@@ -60,10 +62,30 @@ public class BaseInventory : MonoBehaviour
             {
                 _panel.SetActive(true);
                 LoadInventory();
-               // SetLastSprite();
+                SetMoneyText();
 
             }
         }
+    }
+
+    private void SetMoneyText()
+    {
+        _moneyText.text = string.Concat("Money: $", _player.GetMoney().ToString());
+    }
+
+    private void SetLastSprite()
+    {
+        _lastHair = _preview.GetEquiped(Category.Hair);
+        _lastShirt = _preview.GetEquiped(Category.Shirt);
+        _lastPants = _preview.GetEquiped(Category.Pants);
+
+    }
+
+    public void BackButton()
+    {
+        _preview.Equip(_lastHair);
+        _preview.Equip(_lastShirt);
+        _preview.Equip(_lastPants);
     }
     private void LoadInventory()
     {
@@ -71,8 +93,15 @@ public class BaseInventory : MonoBehaviour
         {
             LoadClothes();
         }
+        
         InstantiateButtons();
         LoadPreview();
+        SetLastSprite();
+
+        if(_isInventory == false)
+        {
+            SumPreview();
+        }
     }
 
     public ClothingScriptable GetClothingByCategory(Category category)
@@ -141,5 +170,49 @@ public class BaseInventory : MonoBehaviour
         _buttons.Clear();
     }
 
+    public void SumPreview()
+    {
+        
+        _costInt = 0;
+
+        if(_lastHair._name != _preview.GetEquiped(Category.Hair)._name)
+        {
+            _costInt += _preview.GetEquiped(Category.Hair)._cost;
+        }
+
+        if (_lastShirt._name != _preview.GetEquiped(Category.Shirt)._name)
+        {
+            _costInt += _preview.GetEquiped(Category.Shirt)._cost;
+        }
+
+        if (_lastPants._name != _preview.GetEquiped(Category.Pants)._name)
+        {
+            _costInt += _preview.GetEquiped(Category.Pants)._cost;
+        }
+
+        _costText.text = string.Concat("Cost: $", _costInt.ToString());
+    }
+
+    public void TryToBuy()
+    {
+        if(_player.GetMoney() > _costInt)
+        {
+            _player.ReduceMoney(_costInt);
+
+            _player.AddOnMyClothes(_preview.GetEquiped(Category.Hair));
+            _player.AddOnMyClothes(_preview.GetEquiped(Category.Shirt));
+            _player.AddOnMyClothes(_preview.GetEquiped(Category.Pants));
+
+            _clothes.Remove(_preview.GetEquiped(Category.Hair));
+            _clothes.Remove(_preview.GetEquiped(Category.Shirt));
+            _clothes.Remove(_preview.GetEquiped(Category.Pants));
+
+            LoadPlayer();
+
+            CloseButtons();
+
+            _panel.SetActive(false);
+        }
+    }
 
 }

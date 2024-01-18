@@ -10,11 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6e435ea9e012d24b938f660b3a7d9ca, type: 3}
-  m_Name: Shirt_1
+  m_Name: Pant 1
   m_EditorClassIdentifier: 
-  _path: UpperBody/UpperBody
-  _index: 1
-  _name: Shirt_1
-  _sprite: {fileID: -1661981021, guid: 256ba887599a77d408ad5cf60adfea65, type: 3}
-  _category: 1
-  _cost: 20
+  _name: Pant_1
+  _sprite: {fileID: 301681797, guid: be99bcc24eab5ec4992e8e0982ef7e0c, type: 3}
+  _category: 2
+  _cost: 5
