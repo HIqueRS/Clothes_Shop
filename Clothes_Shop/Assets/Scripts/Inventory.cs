@@ -35,11 +35,30 @@ public class Inventory : MonoBehaviour
     private ClothingScriptable _lastShirt;
     private ClothingScriptable _lastPants;
 
+    [SerializeField]
+    private PlayerEquiped _player;
+    [SerializeField]
+    private PlayerEquiped _preview;
+
+    private void ChangePreview()//load preview
+    {
+        _preview.Equip(_player.GetEquiped(Category.Hair));
+        _preview.Equip(_player.GetEquiped(Category.Shirt));
+        _preview.Equip(_player.GetEquiped(Category.Pants));
+    }
+
+    private void ChangePlayer()//load preview
+    {
+        _player.Equip(_preview.GetEquiped(Category.Hair));
+        _player.Equip(_preview.GetEquiped(Category.Shirt));
+        _player.Equip(_preview.GetEquiped(Category.Pants));
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        InitiateList();
-        LoadClothes();
+        //InitiateList();
+        //LoadClothes();
 
         //LoadInventory();
     }
@@ -53,9 +72,9 @@ public class Inventory : MonoBehaviour
     public void LoadClothes()
     {
         
-        _renderHair.sprite = Resources.LoadAll<Sprite>(_equipedHair._path)[_equipedHair._index];
-        _renderShirt.sprite = Resources.LoadAll<Sprite>(_equipedShirt._path)[_equipedShirt._index];
-        _renderPants.sprite = Resources.LoadAll<Sprite>(_equipedPants._path)[_equipedPants._index];
+        //_renderHair.sprite = Resources.LoadAll<Sprite>(_equipedHair._path)[_equipedHair._index];
+       // _renderShirt.sprite = Resources.LoadAll<Sprite>(_equipedShirt._path)[_equipedShirt._index];
+        //_renderPants.sprite = Resources.LoadAll<Sprite>(_equipedPants._path)[_equipedPants._index];
     }
 
     private void InitiateList()
@@ -123,10 +142,13 @@ public class Inventory : MonoBehaviour
     {
         GameObject aux;
         ButtonClothe aux_button;
+        List<ClothingScriptable> aux_list;
+
+        aux_list = _player.GetListClothes();
 
         _buttons = new List<GameObject>();
 
-        foreach (ClothingScriptable clothes in _myClothes)
+        foreach (ClothingScriptable clothes in aux_list)
         {
 
             aux = GameObject.Instantiate(_inventoryUIButton, _inventoryUIContent.transform);
@@ -141,6 +163,7 @@ public class Inventory : MonoBehaviour
 
             aux_button.LoadScriptable();
 
+            aux_button.SetActiveInventory(true);
         }
     }
 

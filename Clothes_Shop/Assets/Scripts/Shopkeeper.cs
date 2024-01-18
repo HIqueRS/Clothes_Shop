@@ -70,8 +70,11 @@ public class Shopkeeper : MonoBehaviour
             aux_button.PassScriptable(clothes);
 
             aux_button.PassInventory(_inventory);
+            aux_button.PassShopkeeper(this);
 
             aux_button.LoadScriptable();
+
+            aux_button.SetActiveInventory(false);
 
         }
     }
@@ -82,4 +85,6 @@ public class Shopkeeper : MonoBehaviour
         _previewShirt.sprite = _inventory.GetEquiped(Category.Shirt)._sprite;
         _previewPants.sprite = _inventory.GetEquiped(Category.Pants)._sprite;
     }
+
+
 }

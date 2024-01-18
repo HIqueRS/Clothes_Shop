@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using GlobalConfigurations;
+using static Unity.Burst.Intrinsics.X86;
 
 public class ButtonClothe : MonoBehaviour
 {
@@ -13,6 +14,11 @@ public class ButtonClothe : MonoBehaviour
     public ClothingScriptable _clothingScriptable;
 
     public Inventory _inventory;
+    public Shopkeeper _shopkeeper;
+    public BaseInventory _baseInventory;
+
+    public bool _isInventory; 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +34,7 @@ public class ButtonClothe : MonoBehaviour
     public void PassScriptable(ClothingScriptable clothingScriptable)
     {
         _clothingScriptable = clothingScriptable;
+        LoadScriptable();
     }
 
     public void LoadScriptable()
@@ -41,14 +48,57 @@ public class ButtonClothe : MonoBehaviour
     {
         _inventory = inventory;
     }
+     public void PassBaseInventory(BaseInventory baseInventory)
+    {
+        _baseInventory = baseInventory;
+    }
+
+    public void PassShopkeeper(Shopkeeper shopkeeper)
+    {
+        _shopkeeper = shopkeeper;
+
+    }
 
     public void OnButtonPressed()
+    {        
+        if(_isInventory)
+        {
+            InventoryButton();
+        }
+        else
+        {
+            ShopkeeperButton();
+        }        
+    }
+
+    public void SetActiveInventory(bool bolean)
+    {
+        _isInventory = bolean;
+    }
+
+    private void InventoryButton()
+    {
+        ClothingScriptable aux;
+
+        aux = _baseInventory.GetClothingByCategory(_clothingScriptable._category);
+
+        if (_clothingScriptable.name == aux.name)
+        {
+            _baseInventory.UnequipPreview(_clothingScriptable._category);
+        }
+        else
+        {
+            _baseInventory.EquipPreview(_clothingScriptable);
+        }
+    }
+
+    private void ShopkeeperButton()
     {
         ClothingScriptable aux;
 
         aux = _inventory.GetEquiped(_clothingScriptable._category);
-        
-        if(_clothingScriptable.name == aux.name)
+
+        if (_clothingScriptable.name == aux.name)
         {
             _inventory.Unequip(_clothingScriptable._category);
         }
@@ -56,7 +106,6 @@ public class ButtonClothe : MonoBehaviour
         {
             _inventory.Equip(_clothingScriptable, _clothingScriptable._category);
         }
-        
     }
 
    

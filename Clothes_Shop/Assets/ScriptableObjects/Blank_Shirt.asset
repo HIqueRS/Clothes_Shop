@@ -10,11 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6e435ea9e012d24b938f660b3a7d9ca, type: 3}
-  m_Name: Blank
+  m_Name: Blank_Shirt
   m_EditorClassIdentifier: 
-  _path: Square
-  _index: 0
-  _name: 
+  _name: Blank
   _sprite: {fileID: 21300000, guid: 3ac51d772529a7a45a9c1632d3a9f21b, type: 3}
-  _category: 0
+  _category: 1
   _cost: 0

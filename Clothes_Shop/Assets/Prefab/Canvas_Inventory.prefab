@@ -614,6 +614,7 @@ GameObject:
   - component: {fileID: 2779378420548169902}
   - component: {fileID: 2779378420548169903}
   - component: {fileID: 1321737867}
+  - component: {fileID: 6341442765043982984}
   m_Layer: 5
   m_Name: Canvas_Inventory
   m_TagString: Untagged
@@ -730,6 +731,29 @@ MonoBehaviour:
   _previewPants: {fileID: 2779378420280999562}
   _blank: {fileID: 11400000, guid: 75f3dd589ff69f740ba133a021c300f3, type: 2}
   _panel: {fileID: 0}
+  _player: {fileID: 0}
+  _preview: {fileID: 0}
+--- !u!114 &6341442765043982984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2779378420548169900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75263007baf520e49b4e5e9e2dc9a7b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panel: {fileID: 0}
+  _openPanel: 0
+  _clothes: []
+  _player: {fileID: 0}
+  _preview: {fileID: 0}
+  _inventoryUIContent: {fileID: 0}
+  _inventoryUIButton: {fileID: 0}
+  _isInventory: 0
+  _blank: {fileID: 0}
 --- !u!1 &2779378420662565713
 GameObject:
   m_ObjectHideFlags: 0
@@ -1660,6 +1684,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2779378421560941813}
+  - component: {fileID: 264454426992332210}
   m_Layer: 5
   m_Name: PlayerVisualization
   m_TagString: Untagged
@@ -1691,6 +1716,31 @@ RectTransform:
   m_AnchoredPosition: {x: 240, y: 0}
   m_SizeDelta: {x: 360, y: 360}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &264454426992332210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2779378421560941818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1417e4b355e6d44ea0503db2debebe1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _equipedHair: {fileID: 0}
+  _equipedShirt: {fileID: 0}
+  _equipedPants: {fileID: 0}
+  _myClothes: []
+  _money: 0
+  _renderHair: {fileID: 0}
+  _renderShirt: {fileID: 0}
+  _renderPants: {fileID: 0}
+  _isPreview: 1
+  _imageHair: {fileID: 2779378420956935685}
+  _imageShirt: {fileID: 2779378420662565715}
+  _imagePants: {fileID: 2779378420280999562}
+  _blank: {fileID: 11400000, guid: 75f3dd589ff69f740ba133a021c300f3, type: 2}
 --- !u!1 &2779378421635441815
 GameObject:
   m_ObjectHideFlags: 0
