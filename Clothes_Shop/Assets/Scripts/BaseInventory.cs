@@ -9,28 +9,23 @@ public class BaseInventory : MonoBehaviour
 {
 
     [SerializeField]
-    protected GameObject _panel;
-    [SerializeField]
-    protected KeyCode _openPanel;
+    private GameObject _panel;
 
     [SerializeField]
-    protected List<ClothingScriptable> _clothes;
+    private List<ClothingScriptable> _clothes;
 
-    protected ClothingScriptable _lastHair;
-    protected ClothingScriptable _lastShirt;
-    protected ClothingScriptable _lastPants;
 
     [SerializeField]
-    protected PlayerEquiped _player;
+    private PlayerEquiped _player;
     [SerializeField]
-    protected PlayerEquiped _preview;
+    private PlayerEquiped _preview;
 
-    protected List<GameObject> _buttons;
+    private List<GameObject> _buttons;
 
     [SerializeField]
-    protected GameObject _inventoryUIContent;
+    private GameObject _inventoryUIContent;
     [SerializeField]
-    protected GameObject _inventoryUIButton;
+    private GameObject _inventoryUIButton;
 
     [SerializeField]
     private bool _isInventory;
@@ -46,17 +41,10 @@ public class BaseInventory : MonoBehaviour
     private int _costInt;
 
     private List<ClothingScriptable> _sellingItems;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        //OpenUI();
-    }
+    private ClothingScriptable _lastHair;
+    private ClothingScriptable _lastShirt;
+    private ClothingScriptable _lastPants;
 
     public void OpenUI()
     {
@@ -249,6 +237,7 @@ public class BaseInventory : MonoBehaviour
 
             CloseButtons();
             InstantiateButtons();
+            LoadPreview();
         }
     }
 
@@ -261,19 +250,23 @@ public class BaseInventory : MonoBehaviour
 
         foreach (ClothingScriptable clothes in _player.GetListClothes())
         {
-            aux = GameObject.Instantiate(_inventoryUIButton, _inventoryUIContent.transform);
+            if(clothes._category != Category.Hair)
+            {
+                aux = GameObject.Instantiate(_inventoryUIButton, _inventoryUIContent.transform);
 
-            _buttons.Add(aux);
+                _buttons.Add(aux);
 
-            aux_button = aux.GetComponent<ButtonClothe>();
+                aux_button = aux.GetComponent<ButtonClothe>();
 
-            aux_button.PassScriptable(clothes);
+                aux_button.PassScriptable(clothes);
 
-            aux_button.PassBaseInventory(this);
+                aux_button.PassBaseInventory(this);
 
-            aux_button.SetActiveInventory(false);
+                aux_button.SetActiveInventory(false);
 
-            aux_button.SetActiveSelling(true);
+                aux_button.SetActiveSelling(true);
+            }
+            
         }
     }
 
@@ -290,6 +283,7 @@ public class BaseInventory : MonoBehaviour
         {
             profit += item._cost;
 
+            _clothes.Add(item);
             _player.GetListClothes().Remove(item);
         }
         _player.AddMoney(profit);

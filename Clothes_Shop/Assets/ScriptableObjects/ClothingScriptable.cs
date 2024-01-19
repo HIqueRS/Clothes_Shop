@@ -12,6 +12,4 @@ public class ClothingScriptable : ScriptableObject
     public Category _category;
     public int _cost;
 
-
-    
 }

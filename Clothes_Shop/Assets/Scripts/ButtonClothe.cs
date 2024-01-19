@@ -7,30 +7,24 @@ using static Unity.Burst.Intrinsics.X86;
 
 public class ButtonClothe : MonoBehaviour
 {
-    public TMPro.TextMeshProUGUI _clotheName;
-    public TMPro.TextMeshProUGUI _clotheCost;
-    public Image _clotheIcon;
+    [SerializeField]
+    private TMPro.TextMeshProUGUI _clotheName;
+    [SerializeField]
+    private TMPro.TextMeshProUGUI _clotheCost;
+    [SerializeField]
+    private Image _clotheIcon;
 
-    public ClothingScriptable _clothingScriptable;
+    [SerializeField]
+    private ClothingScriptable _clothingScriptable;
 
-    public Inventory _inventory;
-    public Shopkeeper _shopkeeper;
-    public BaseInventory _baseInventory;
+  
+    [SerializeField]
+    private BaseInventory _baseInventory;
 
-    public bool _isInventory; 
-    public bool _isSelling; 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField]
+    private bool _isInventory; 
+    [SerializeField]
+    private bool _isSelling; 
 
     public void PassScriptable(ClothingScriptable clothingScriptable)
     {
@@ -41,24 +35,17 @@ public class ButtonClothe : MonoBehaviour
     public void LoadScriptable()
     {
         _clotheName.text = _clothingScriptable.name;
-        _clotheCost.text = _clothingScriptable._cost.ToString();
+        _clotheCost.text = string.Concat("$", _clothingScriptable._cost.ToString());
         _clotheIcon.sprite = _clothingScriptable._sprite;
     }
 
-    public void PassInventory(Inventory inventory)
-    {
-        _inventory = inventory;
-    }
+   
      public void PassBaseInventory(BaseInventory baseInventory)
     {
         _baseInventory = baseInventory;
     }
 
-    public void PassShopkeeper(Shopkeeper shopkeeper)
-    {
-        _shopkeeper = shopkeeper;
-
-    }
+    
 
     public void OnButtonPressed()
     {        

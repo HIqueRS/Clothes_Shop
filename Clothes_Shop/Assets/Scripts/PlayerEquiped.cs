@@ -41,7 +41,8 @@ public class PlayerEquiped : MonoBehaviour
     [SerializeField]
     private Image _imagePants;
 
-
+    [Space(20)]
+    [Header("Blank")]
     [SerializeField]
     private ClothingScriptable _blankHair;
     [SerializeField]
