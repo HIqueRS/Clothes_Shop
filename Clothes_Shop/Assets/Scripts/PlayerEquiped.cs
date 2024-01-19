@@ -146,6 +146,11 @@ public class PlayerEquiped : MonoBehaviour
         _money -= i;
     }
 
+    public void AddMoney(int i)
+    {
+        _money += i;
+    }
+
     private void ChangeVisualization(ClothingScriptable clothe)
     {
         if (_isPreview)

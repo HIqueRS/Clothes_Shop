@@ -18,6 +18,7 @@ public class ButtonClothe : MonoBehaviour
     public BaseInventory _baseInventory;
 
     public bool _isInventory; 
+    public bool _isSelling; 
 
     // Start is called before the first frame update
     void Start()
@@ -67,13 +68,45 @@ public class ButtonClothe : MonoBehaviour
         }
         else
         {
-            ShopkeeperButton();
+            if(_isSelling == false)
+            {
+                ShopkeeperButton();
+            }
+            else
+            {
+                SellingButton();
+            }
         }        
     }
+
 
     public void SetActiveInventory(bool bolean)
     {
         _isInventory = bolean;
+    }
+
+    public void SetActiveSelling(bool bolean)
+    {
+        _isSelling = bolean;
+    }
+
+    private void SellingButton()
+    {
+        
+        _baseInventory.AddSellingList(_clothingScriptable);
+
+        ClothingScriptable aux;
+
+        aux = _baseInventory.GetClothingByCategory(_clothingScriptable._category);
+
+        if (_clothingScriptable.name == aux.name)
+        {
+            _baseInventory.UnequipPreview(_clothingScriptable._category);
+        }
+
+       
+
+        Destroy(this.gameObject);
     }
 
     private void InventoryButton()
