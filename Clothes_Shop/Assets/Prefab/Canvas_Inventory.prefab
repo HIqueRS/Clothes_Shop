@@ -613,7 +613,6 @@ GameObject:
   - component: {fileID: 2779378420548169897}
   - component: {fileID: 2779378420548169902}
   - component: {fileID: 2779378420548169903}
-  - component: {fileID: 1321737867}
   - component: {fileID: 6341442765043982984}
   m_Layer: 5
   m_Name: Canvas_Inventory
@@ -704,35 +703,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &1321737867
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2779378420548169900}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8a859e7d6b3ea1499f00a8a19d27d92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _equipedHair: {fileID: 11400000, guid: 8bb5d5fc1f334e24ca043e1be4db95d1, type: 2}
-  _equipedShirt: {fileID: 11400000, guid: e94c377940b2de94ba803251d029d5b1, type: 2}
-  _equipedPants: {fileID: 11400000, guid: b75f2d9b362cd2547b7ac2eb64840e80, type: 2}
-  _renderHair: {fileID: 0}
-  _renderShirt: {fileID: 0}
-  _renderPants: {fileID: 0}
-  _myClothes: []
-  _inventoryUI: {fileID: 0}
-  _inventoryUIContent: {fileID: 2779378421552059369}
-  _inventoryUIButton: {fileID: 5212314956653123498, guid: ce0eba7d45f7d1740874295b0f21b2fb, type: 3}
-  _previewHair: {fileID: 2779378420956935685}
-  _previewShirt: {fileID: 2779378420662565715}
-  _previewPants: {fileID: 2779378420280999562}
-  _blank: {fileID: 11400000, guid: 75f3dd589ff69f740ba133a021c300f3, type: 2}
-  _panel: {fileID: 0}
-  _player: {fileID: 0}
-  _preview: {fileID: 0}
 --- !u!114 &6341442765043982984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -753,8 +723,8 @@ MonoBehaviour:
   _inventoryUIContent: {fileID: 0}
   _inventoryUIButton: {fileID: 0}
   _isInventory: 0
-  _money: {fileID: 0}
-  _cost: {fileID: 0}
+  _moneyText: {fileID: 0}
+  _costText: {fileID: 0}
 --- !u!1 &2779378420662565713
 GameObject:
   m_ObjectHideFlags: 0
@@ -1444,7 +1414,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1321737867}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
         m_MethodName: LoadLastClothe
         m_Mode: 1
@@ -1456,7 +1426,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1321737867}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
         m_MethodName: CloseButtons
         m_Mode: 1
@@ -1975,7 +1945,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1321737867}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
         m_MethodName: LoadLastClothe
         m_Mode: 1

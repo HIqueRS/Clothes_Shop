@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7663377263883450380}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63,7 +63,9 @@ MonoBehaviour:
   _imageHair: {fileID: 0}
   _imageShirt: {fileID: 0}
   _imagePants: {fileID: 0}
-  _blank: {fileID: 11400000, guid: 75f3dd589ff69f740ba133a021c300f3, type: 2}
+  _blankHair: {fileID: 0}
+  _blankShirt: {fileID: 0}
+  _blankPants: {fileID: 0}
 --- !u!114 &38805381537962801
 MonoBehaviour:
   m_ObjectHideFlags: 0

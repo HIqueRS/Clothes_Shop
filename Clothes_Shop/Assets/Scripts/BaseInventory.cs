@@ -51,20 +51,19 @@ public class BaseInventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        OpenUI();
+        //OpenUI();
     }
 
-    private void OpenUI()
+    public void OpenUI()
     {
         if (!_panel.activeSelf)
         {
-            if (Input.GetKeyDown(_openPanel))
-            {
+           
                 _panel.SetActive(true);
                 LoadInventory();
                 SetMoneyText();
 
-            }
+            
         }
     }
 
